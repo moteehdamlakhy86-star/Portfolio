@@ -42,6 +42,19 @@
     .contact-info a{display:flex;align-items:center;gap:10px;margin-bottom:15px;font-size:16px}
     .contact-info a:hover{color:var(--cyan)}
 
+    /* رسالة النجاح */
+    #successMessage {
+      display: none;
+      background: rgba(98, 224, 208, 0.1);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
     footer{padding:30px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:50px}
     .ltr { direction: ltr; text-align: left; }
     .ltr .step { border-right: 0; border-left: 3px solid var(--cyan); padding: 4px 15px; }
@@ -186,33 +199,44 @@
   </div>
 </section>
 
-<!-- قسم التواصل الجديد والمبسط -->
+<!-- قسم التواصل مع Web3Forms -->
 <section class="wrap" id="contact">
   <div class="contact-form">
     <!-- النموذج (يمين) -->
     <div>
       <h2><span data-lang="ar">اطلب خدمتك الآن</span><span data-lang="tr">Hemen Teklif Alın</span></h2>
-      <p><span data-lang="ar">أرسل تفاصيل مشروعك عبر بريدك الإلكتروني المفضل.</span><span data-lang="tr">Projenizin detaylarını e-posta ile gönderin.</span></p>
+      <p><span data-lang="ar">أرسل تفاصيل مشروعك وسأرد عليك في أقرب وقت.</span><span data-lang="tr">Projenizin detaylarını gönderin, en kısa sürede size dönüş yapayım.</span></p>
       
-      <!-- نموذج Mailto (يفتح تطبيق البريد مباشرة) -->
-      <form action="mailto:moteehdamlakhy86@gmail.com" method="POST" enctype="text/plain">
+      <!-- نموذج Web3Forms -->
+      <form id="contactForm">
+        <!-- تم وضع المفتاح الخاص بك هنا -->
+        <input type="hidden" name="access_key" value="2fc7f689-31b6-4085-91cd-7a8d8e9010ba">
+        <input type="hidden" name="subject" value="طلب مشروع جديد من البورتفوليو">
+        <input type="hidden" name="from_name" value="Portfolio Website">
+        
         <div class="form-group">
           <label for="name"><span data-lang="ar">الاسم الكريم</span><span data-lang="tr">Adınız</span></label>
-          <input type="text" id="name" name="Name" required placeholder="اكتب اسمك هنا...">
+          <input type="text" id="name" name="name" required placeholder="اكتب اسمك هنا...">
         </div>
         <div class="form-group">
-          <label for="email"><span data-lang="ar">البريد الإلكتروني (اختياري)</span><span data-lang="tr">E-posta Adresiniz (isteğe bağlı)</span></label>
-          <input type="email" id="email" name="Email" placeholder="example@mail.com">
+          <label for="email"><span data-lang="ar">البريد الإلكتروني</span><span data-lang="tr">E-posta Adresiniz</span></label>
+          <input type="email" id="email" name="email" required placeholder="example@mail.com">
         </div>
         <div class="form-group">
           <label for="message"><span data-lang="ar">تفاصيل المشروع</span><span data-lang="tr">Proje Detayları</span></label>
-          <textarea id="message" name="Message" required placeholder="أخبرني عن فكرتك، أو نوع التطبيق الذي تحتاجه..."></textarea>
+          <textarea id="message" name="message" required placeholder="أخبرني عن فكرتك، أو نوع التطبيق الذي تحتاجه..."></textarea>
         </div>
         
-        <button type="submit" class="btn">
-          <span data-lang="ar">إرسال الطلب عبر البريد</span><span data-lang="tr">E-posta ile Gönder</span>
+        <button type="submit" class="btn" id="submitBtn">
+          <span data-lang="ar">إرسال الطلب</span><span data-lang="tr">Talebi Gönder</span>
         </button>
       </form>
+
+      <!-- رسالة النجاح -->
+      <div id="successMessage">
+        <span data-lang="ar">✅ شكراً لك! تم إرسال رسالتك بنجاح. سأرد عليك في أقرب وقت.</span>
+        <span data-lang="tr">✅ Teşekkürler! Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağım.</span>
+      </div>
     </div>
 
     <!-- معلومات التواصل (يسار) -->
@@ -235,6 +259,7 @@
 <footer><div class="wrap"><span data-lang="ar">© 2026 — معرض أعمال تطوير التطبيقات والبرامج. جميع الحقوق محفوظة.</span><span data-lang="tr">© 2026 — Uygulama ve yazılım geliştirme portföyü. Tüm hakları saklıdır.</span></div></footer>
 
 <script>
+  // كود تبديل اللغة
   const btn = document.getElementById('langBtn');
   let lang = 'ar';
 
@@ -247,9 +272,7 @@
       }
     });
   }
-
   switchLanguage('ar');
-
   btn.addEventListener('click', () => {
     lang = lang === 'ar' ? 'tr' : 'ar';
     document.documentElement.lang = lang;
@@ -257,6 +280,42 @@
     document.body.classList.toggle('ltr', lang === 'tr');
     switchLanguage(lang);
     btn.textContent = lang === 'ar' ? 'Türkçe' : 'العربية';
+  });
+
+  // كود إرسال النموذج عبر Web3Forms
+  const form = document.getElementById('contactForm');
+  const successMessage = document.getElementById('successMessage');
+  const submitBtn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // تغيير نص الزر أثناء الإرسال
+    submitBtn.textContent = 'جاري الإرسال...';
+    submitBtn.disabled = true;
+
+    const formData = new FormData(form);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        form.style.display = 'none'; // إخفاء النموذج
+        successMessage.style.display = 'block'; // إظهار رسالة النجاح
+      } else {
+        alert('حدث خطأ، يرجى المحاولة مرة أخرى.');
+        submitBtn.textContent = 'إرسال الطلب';
+        submitBtn.disabled = false;
+      }
+    })
+    .catch(error => {
+      alert('حدث خطأ في الاتصال، يرجى المحاولة مرة أخرى.');
+      submitBtn.textContent = 'إرسال الطلب';
+      submitBtn.disabled = false;
+    });
   });
 </script>
 </body>
