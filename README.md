@@ -28,7 +28,7 @@
 > **المميزات:** فهرسة فائقة السرعة، واجهة مستخدم مظلمة (Dark Mode) أنيقة، لوحة تحكم تعرض إحصائيات دقيقة، وذاكرة للبحث الأخير.
 > **التقنيات:** Windows Desktop, Local Database, UI/UX.
 
-![FINDIT](https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/findit.png)
+![FINDIT](images/projects/android/findit.png)
 
 ---
 
@@ -37,7 +37,7 @@
 > **المميزات:** واجهة ضخمة وواضحة مناسبة للمسافات البعيدة، تصميم مريح للعين، تكامل مع بيانات الموقع الجغرافي.
 > **التقنيات:** Android TV, Location Services, UI Design.
 
-![TV Prayer App](https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/tv-prayer.png)
+![TV Prayer App](images/projects/android/tv-prayer.png)
 
 ---
 
@@ -46,7 +46,7 @@
 > **المميزات:** تشفير البيانات (AES-256)، إمكانية حذف البيانات ذاتياً بعد قراءتها (Self-destruct)، لا يتطلب تسجيل حساب.
 > **التقنيات:** AES-256 Encryption, Secure Data Transfer.
 
-![PassDrop](https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/passdrop.png)
+![PassDrop](images/projects/android/passdrop.png)
 
 ---
 
@@ -55,7 +55,7 @@
 > **المميزات:** لوحة تحكم تفاعلية، خرائط حرارية ومقارنات (18 ولاية تركية)، فلترة متقدمة للبيانات، وتقارير تعمل دون إنترنت.
 > **التقنيات:** Data Visualization, Interactive Maps, Offline Data Processing.
 
-![Black Sea Atlas](https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/black-sea-atlas.png)
+![Black Sea Atlas](images/projects/android/black-sea-atlas.png)
 
 ---
 
@@ -64,22 +64,22 @@
 > **المميزات:** اكتشاف تلقائي للأجهزة عبر الشبكة (NSD)، الاتصال المباشر عبر IP والمنفذ (Port)، دعم كامل للغات.
 > **التقنيات:** Network Sockets, IP/Ports, Local Network Discovery.
 
-![Remote Control](https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/remote-control.png)
+![Remote Control](images/projects/android/remote-control.png)
 
 ---
 
 ### 6️⃣ أدوات مساعدة (Utilities)
 #### 📄 مدير طباعة PDF
 > تطبيق أندرويد لفتح، تصفح، وإدارة ملفات PDF بسهولة استعداداً لطباعتها.
-![PDF Manager](https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/pdf-manager.png)
+![PDF Manager](images/projects/android/pdf-manager.png)
 
 #### 📍 وين حطيتها؟ (Item Tracker)
 > تطبيق لتنظيم وتذكر أماكن الأشياء المهمة (مفاتيح، أوراق، إلكترونيات).
-![Item Tracker](https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/where-is-it.png)
+![Item Tracker](images/projects/android/where-is-it.png)
 
 #### 💰 سهمك (Expense Splitter)
 > تطبيق مالي عملي لتقسيم الفواتير والمصاريف بين الأصدقاء والمجموعات بكل سهولة.
-![Sahmak](https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/sahmak.png)
+![Sahmak](images/projects/android/sahmak.png)
 
 ---
 
