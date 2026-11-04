@@ -22,8 +22,9 @@
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
     .icon{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;background:#203d61;font-size:22px;margin-bottom:12px}
     .card h3{margin:5px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:4px 10px;color:var(--cyan);font-size:12px;margin:4px 3px 0 0}
-    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{overflow:hidden;padding:0}.project-visual{height:160px;background:linear-gradient(135deg,#203c60,#111c2e);display:grid;place-items:center;color:#dceaff;font-size:44px;border-bottom:1px solid var(--line)}
-    .project-body{padding:18px}.project-body p{color:var(--muted);font-size:14px}.placeholder{font-size:12px;color:#ffd98a}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.project{overflow:hidden;padding:0}
+    .project img{width:100%;height:250px;object-fit:cover;border-bottom:1px solid var(--line);background:#000}
+    .project-body{padding:18px}.project-body p{color:var(--muted);font-size:14px}
     .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{border-right:3px solid var(--cyan);padding:4px 15px}
     .contact{background:linear-gradient(135deg,#16375c,#142238);border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:20px}
     footer{padding:30px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:50px}
@@ -56,13 +57,12 @@
   <div class="hero-card" aria-label="نموذج توضيحي لواجهة برنامج">
     <div class="mock-window"><div class="dots"><i></i><i></i><i></i></div>
       <div class="mock-grid">
-        <div class="mock-box"><span data-lang="ar">مشاريع</span><span data-lang="tr">Projeler</span><strong>01</strong></div>
+        <div class="mock-box"><span data-lang="ar">مشاريع</span><span data-lang="tr">Projeler</span><strong>8</strong></div>
         <div class="mock-box"><span data-lang="ar">تطبيقات</span><span data-lang="tr">Uygulamalar</span><strong>Android</strong></div>
         <div class="mock-box"><span data-lang="ar">منصات</span><span data-lang="tr">Platformlar</span><strong>3</strong></div>
         <div class="mock-box"><span data-lang="ar">تواصل</span><span data-lang="tr">İletişim</span><strong>24/7</strong></div>
       </div>
     </div>
-    <p class="muted" style="font-size:12px;margin-bottom:0"><span data-lang="ar">رسم توضيحي للصفحة — استبدله بلقطة من مشروعك.</span><span data-lang="tr">Sayfa taslak görselidir — kendi projenizin ekran görüntüsüyle değiştirin.</span></p>
   </div>
 </section>
 
@@ -76,11 +76,57 @@
 </section>
 
 <section class="wrap" id="work">
-  <div class="section-head"><h2><span data-lang="ar">نماذج من الأعمال</span><span data-lang="tr">Proje örnekleri</span></h2><p><span data-lang="ar">أضف هنا مشاريعك الحقيقية وصوراً من تشغيلها.</span><span data-lang="tr">Buraya gerçek projelerinizi ve ekran görüntülerini ekleyin.</span></p></div>
+  <div class="section-head"><h2><span data-lang="ar">نماذج من الأعمال</span><span data-lang="tr">Proje örnekleri</span></h2><p><span data-lang="ar">بعض المشاريع التي قمت بتطويرها.</span><span data-lang="tr">Geliştirdiğim bazı projeler.</span></p></div>
   <div class="projects">
-    <article class="card project"><div class="project-visual">📱</div><div class="project-body"><h3><span data-lang="ar">مشروع Android رقم 1</span><span data-lang="tr">Android Projesi 1</span></h3><p><span data-lang="ar">اكتب هنا وظيفة التطبيق والمشكلة التي يحلها، وأضف صوراً حقيقية.</span><span data-lang="tr">Uygulamanın ne yaptığını ve hangi ihtiyacı karşıladığını yazın; gerçek ekran görüntüleri ekleyin.</span></p><div class="placeholder"><span data-lang="ar">[استبدل هذه المساحة بصورة التطبيق]</span><span data-lang="tr">[Bu alanı uygulama görseliyle değiştirin]</span></div></div></article>
-    <article class="card project"><div class="project-visual">📺</div><div class="project-body"><h3><span data-lang="ar">مشروع Android TV</span><span data-lang="tr">Android TV Projesi</span></h3><p><span data-lang="ar">اشرح طريقة التنقل بالريموت وأهم ميزات التطبيق.</span><span data-lang="tr">Kumandayla gezinmeyi ve uygulamanın temel özelliklerini açıklayın.</span></p><div class="placeholder"><span data-lang="ar">[أضف صورة أو لقطة فيديو]</span><span data-lang="tr">[Görsel veya video karesi ekleyin]</span></div></div></article>
-    <article class="card project"><div class="project-visual">🖥️</div><div class="project-body"><h3><span data-lang="ar">برنامج Windows + MSI</span><span data-lang="tr">Windows Yazılımı + MSI</span></h3><p><span data-lang="ar">اكتب وظيفة البرنامج، وما الذي يمكن للمستخدم إنجازه به.</span><span data-lang="tr">Programın işlevini ve kullanıcının neler yapabildiğini açıklayın.</span></p><div class="placeholder"><span data-lang="ar">[أضف صورة البرنامج والمثبت]</span><span data-lang="tr">[Program ve kurulum görseli ekleyin]</span></div></div></article>
+    
+    <!-- Project 1 -->
+    <article class="card project">
+      <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/findit.png" alt="FINDIT">
+      <div class="project-body"><h3>FINDIT (Windows)</h3><p><span data-lang="ar">أداة بحث فائقة السرعة لنظام Windows مع واجهة مظلمة أنيقة وإحصائيات دقيقة.</span><span data-lang="tr">Windows için hızlı arama aracı, karanlık arayüz ve istatistikler.</span></p></div>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="card project">
+      <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/tv-prayer.png" alt="TV Prayer App">
+      <div class="project-body"><h3>تطبيق الساعة والصلوات (Android TV)</h3><p><span data-lang="ar">واجهة ضخمة للشاشات الذكية تعرض الوقت والتقويم ومواقيت الصلاة.</span><span data-lang="tr">Akıllı ekranlar için saat, takvim ve namaz vakitleri arayüzü.</span></p></div>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="card project">
+      <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/passdrop.png" alt="PassDrop">
+      <div class="project-body"><h3>PassDrop (أمان)</h3><p><span data-lang="ar">مشاركة ملفات وملاحظات مشفرة (AES-256) مع خاصية الحذف الذاتي.</span><span data-lang="tr">AES-256 şifreli dosya ve not paylaşımı, kendi kendini imha etme.</span></p></div>
+    </article>
+
+    <!-- Project 4 -->
+    <article class="card project">
+      <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/black-sea-atlas.png" alt="Black Sea Atlas">
+      <div class="project-body"><h3>مرصد البحر الأسود (BI)</h3><p><span data-lang="ar">لوحة تحكم تفاعلية وتحليل بيانات جغرافية واقتصادية لـ 18 ولاية تركية.</span><span data-lang="tr">18 Türk ili için interaktif kontrol paneli ve coğrafi veri analizi.</span></p></div>
+    </article>
+
+    <!-- Project 5 -->
+    <article class="card project">
+      <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/remote-control.png" alt="Remote Control">
+      <div class="project-body"><h3>شاشتي - التحكم</h3><p><span data-lang="ar">تطبيق تحكم عن بُعد للشاشات عبر الشبكة المحلية (IP/Port).</span><span data-lang="tr">Yerel ağ (IP/Port) üzerinden ekranlar için uzaktan kumanda.</span></p></div>
+    </article>
+
+    <!-- Project 6 -->
+    <article class="card project">
+      <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/pdf-manager.png" alt="PDF Manager">
+      <div class="project-body"><h3>مدير طباعة PDF</h3><p><span data-lang="ar">تطبيق لفتح وتصفح وإدارة ملفات PDF استعداداً لطباعتها.</span><span data-lang="tr">PDF dosyalarını açmak, görüntülemek ve yazdırmak için uygulama.</span></p></div>
+    </article>
+
+    <!-- Project 7 -->
+    <article class="card project">
+      <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/where-is-it.png" alt="Item Tracker">
+      <div class="project-body"><h3>وين حطيتها؟ (تتبع الأشياء)</h3><p><span data-lang="ar">تطبيق لتنظيم وتذكر أماكن الأشياء المهمة (مفاتيح، أوراق، إلكترونيات).</span><span data-lang="tr">Önemli eşyaların yerini hatırlamak için düzenleme uygulaması.</span></p></div>
+    </article>
+
+    <!-- Project 8 -->
+    <article class="card project">
+      <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/sahmak.png" alt="Sahmak">
+      <div class="project-body"><h3>سهمك (تقسيم المصاريف)</h3><p><span data-lang="ar">تطبيق مالي عملي لتقسيم الفواتير والمصاريف بين الأصدقاء والمجموعات.</span><span data-lang="tr">Arkadaşlar ve gruplar arasında faturaları bölmek için pratik finans uygulaması.</span></p></div>
+    </article>
+
   </div>
 </section>
 
@@ -100,7 +146,7 @@
   </div>
 </section>
 </main>
-<footer><div class="wrap"><span data-lang="ar">© 2026 — معرض أعمال تطوير التطبيقات والبرامج. جميع الحقوق محفوظة.</span><span data-lang="tr">© 2026 — Uygulama ve yazılım geliştirme portföyü. Tüm hakları saklıdır.</span><br><span data-lang="ar">استبدل بيانات التواصل وأضف مشاريعك الحقيقية قبل النشر.</span><span data-lang="tr">Yayınlamadan önce iletişim bilgilerinizi değiştirin ve gerçek projelerinizi ekleyin.</span></div></footer>
+<footer><div class="wrap"><span data-lang="ar">© 2026 — معرض أعمال تطوير التطبيقات والبرامج. جميع الحقوق محفوظة.</span><span data-lang="tr">© 2026 — Uygulama ve yazılım geliştirme portföyü. Tüm hakları saklıdır.</span></div></footer>
 <script>
   const btn=document.getElementById('langBtn');
   let lang='ar';
