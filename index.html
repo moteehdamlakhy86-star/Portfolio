@@ -28,7 +28,13 @@
     .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{border-right:3px solid var(--cyan);padding:4px 15px}
     .contact{background:linear-gradient(135deg,#16375c,#142238);border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:20px}
     footer{padding:30px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:50px}
-    [data-lang="tr"]{display:none}.ltr{direction:ltr;text-align:left}
+    
+    /* إخفاء اللغة التركية افتراضياً */
+    [data-lang="tr"] { display: none; }
+    
+    .ltr { direction: ltr; text-align: left; }
+    .ltr .step { border-right: 0; border-left: 3px solid var(--cyan); padding: 4px 15px; }
+
     @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:55px}.cards,.projects,.steps{grid-template-columns:1fr}.navlinks{display:none}.contact{display:block}.contact .btn{display:inline-block;margin-top:12px}}
   </style>
 </head>
@@ -147,18 +153,32 @@
 </section>
 </main>
 <footer><div class="wrap"><span data-lang="ar">© 2026 — معرض أعمال تطوير التطبيقات والبرامج. جميع الحقوق محفوظة.</span><span data-lang="tr">© 2026 — Uygulama ve yazılım geliştirme portföyü. Tüm hakları saklıdır.</span></div></footer>
+
 <script>
-  const btn=document.getElementById('langBtn');
-  let lang='ar';
-  btn.addEventListener('click',()=>{
-    lang=lang==='ar'?'tr':'ar';
-    document.documentElement.lang=lang;
-    document.documentElement.dir=lang==='ar'?'rtl':'ltr';
-    document.body.classList.toggle('ltr',lang==='tr');
-    document.querySelectorAll('[data-lang]').forEach(el=>el.style.display=el.dataset.lang===lang?'':'none');
-    btn.textContent=lang==='ar'?'Türkçe':'العربية';
+  const btn = document.getElementById('langBtn');
+  let lang = 'ar';
+
+  btn.addEventListener('click', () => {
+    // تبديل اللغة
+    lang = lang === 'ar' ? 'tr' : 'ar';
+    
+    // تحديث خصائص الصفحة
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.body.classList.toggle('ltr', lang === 'tr');
+    
+    // إظهار وإخفاء النصوص بناءً على اللغة
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      if (el.dataset.lang === lang) {
+        el.style.display = ''; // إظهار
+      } else {
+        el.style.display = 'none'; // إخفاء
+      }
+    });
+    
+    // تغيير نص الزر
+    btn.textContent = lang === 'ar' ? 'Türkçe' : 'العربية';
   });
-  document.querySelectorAll('[data-lang="tr"]').forEach(el=>el.style.display='none');
 </script>
 </body>
 </html>
