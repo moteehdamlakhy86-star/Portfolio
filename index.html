@@ -26,11 +26,26 @@
     .project img{width:100%;height:250px;object-fit:cover;border-bottom:1px solid var(--line);background:#1a2638;display:block}
     .project-body{padding:18px}.project-body p{color:var(--muted);font-size:14px}
     .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{border-right:3px solid var(--cyan);padding:4px 15px}
-    .contact{background:linear-gradient(135deg,#16375c,#142238);border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+    
+    /* تنسيق نموذج التواصل الجديد */
+    .contact-form{background:linear-gradient(135deg,#16375c,#142238);border:1px solid var(--line);border-radius:24px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+    .contact-form h2{margin-top:0;color:var(--cyan)}
+    .contact-form p{color:var(--muted);margin-bottom:20px}
+    .form-group{margin-bottom:15px}
+    .form-group label{display:block;margin-bottom:5px;font-size:14px;color:var(--text)}
+    .form-group input, .form-group textarea{width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);background:rgba(0,0,0,0.2);color:var(--text);font-family:inherit}
+    .form-group input:focus, .form-group textarea:focus{outline:none;border-color:var(--cyan)}
+    .form-group textarea{resize:vertical;height:120px}
+    .contact-form .btn{margin-top:10px;width:100%;font-size:16px}
+    .contact-info{display:flex;flex-direction:column;justify-content:center;background:rgba(0,0,0,0.1);padding:30px;border-radius:16px}
+    .contact-info h3{color:var(--text);margin-top:0}
+    .contact-info a{display:flex;align-items:center;gap:10px;margin-bottom:15px;font-size:16px}
+    .contact-info a:hover{color:var(--cyan)}
+
     footer{padding:30px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:50px}
     .ltr { direction: ltr; text-align: left; }
     .ltr .step { border-right: 0; border-left: 3px solid var(--cyan); padding: 4px 15px; }
-    @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:55px}.cards,.projects,.steps{grid-template-columns:1fr}.navlinks{display:none}.contact{display:block}.contact .btn{display:inline-block;margin-top:12px}}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:55px}.cards,.projects,.steps,.contact-form{grid-template-columns:1fr}.navlinks{display:none}}
   </style>
 </head>
 <body>
@@ -51,7 +66,7 @@
     <h1><span data-lang="ar">أحوّل فكرتك إلى تطبيق أو برنامج عملي.</span><span data-lang="tr">Fikrinizi çalışan bir uygulamaya veya yazılıma dönüştürüyorum.</span></h1>
     <p><span data-lang="ar">أطوّر تطبيقات Android وAndroid TV وبرامج Windows، مع التركيز على سهولة الاستخدام واحتياجات المشروع.</span><span data-lang="tr">Android, Android TV ve Windows uygulamaları geliştiriyorum. Projenizin ihtiyaçlarına ve kullanım kolaylığına odaklanıyorum.</span></p>
     <div class="actions">
-      <a class="btn" href="#contact"><span data-lang="ar">ناقش مشروعك معي</span><span data-lang="tr">Projenizi konuşalım</span></a>
+      <a class="btn" href="#contact"><span data-lang="ar">اطلب خدمتك الآن</span><span data-lang="tr">Hemen Teklif Alın</span></a>
       <a class="btn secondary" href="#work"><span data-lang="ar">شاهد نماذج الأعمال</span><span data-lang="tr">Projeleri inceleyin</span></a>
     </div>
   </div>
@@ -94,8 +109,6 @@
 <section class="wrap" id="work">
   <div class="section-head"><h2><span data-lang="ar">نماذج من الأعمال</span><span data-lang="tr">Proje örnekleri</span></h2><p><span data-lang="ar">بعض المشاريع التي قمت بتطويرها.</span><span data-lang="tr">Geliştirdiğim bazı projeler.</span></p></div>
   <div class="projects">
-    
-    <!-- استخدام الرابط الذي يحتوي على كود Commit الثابت (Hash) -->
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/2b2d0dc2abc3f6d8ffb074a564d19b22955d66ea/images/projects/android/findit.png" alt="FINDIT" loading="lazy">
       <div class="project-body">
@@ -103,7 +116,6 @@
         <p><span data-lang="ar">أداة بحث فائقة السرعة لنظام Windows مع واجهة مظلمة أنيقة وإحصائيات دقيقة.</span><span data-lang="tr">Windows için hızlı arama aracı, karanlık arayüz ve istatistikler.</span></p>
       </div>
     </article>
-
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/2b2d0dc2abc3f6d8ffb074a564d19b22955d66ea/images/projects/android/tv-prayer.png" alt="TV Prayer App" loading="lazy">
       <div class="project-body">
@@ -111,7 +123,6 @@
         <p><span data-lang="ar">واجهة ضخمة للشاشات الذكية تعرض الوقت والتقويم ومواقيت الصلاة.</span><span data-lang="tr">Akıllı ekranlar için saat, takvim ve namaz vakitleri arayüzü.</span></p>
       </div>
     </article>
-
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/2b2d0dc2abc3f6d8ffb074a564d19b22955d66ea/images/projects/android/passdrop.png" alt="PassDrop" loading="lazy">
       <div class="project-body">
@@ -119,7 +130,6 @@
         <p><span data-lang="ar">مشاركة ملفات وملاحظات مشفرة (AES-256) مع خاصية الحذف الذاتي.</span><span data-lang="tr">AES-256 şifreli dosya ve not paylaşımı, kendi kendini imha etme.</span></p>
       </div>
     </article>
-
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/2b2d0dc2abc3f6d8ffb074a564d19b22955d66ea/images/projects/android/black-sea-atlas.png" alt="Black Sea Atlas" loading="lazy">
       <div class="project-body">
@@ -127,7 +137,6 @@
         <p><span data-lang="ar">لوحة تحكم تفاعلية وتحليل بيانات جغرافية واقتصادية لـ 18 ولاية تركية.</span><span data-lang="tr">18 Türk ili için interaktif kontrol paneli ve coğrafi veri analizi.</span></p>
       </div>
     </article>
-
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/2b2d0dc2abc3f6d8ffb074a564d19b22955d66ea/images/projects/android/remote-control.png" alt="Remote Control" loading="lazy">
       <div class="project-body">
@@ -135,7 +144,6 @@
         <p><span data-lang="ar">تطبيق تحكم عن بُعد للشاشات عبر الشبكة المحلية (IP/Port).</span><span data-lang="tr">Yerel ağ (IP/Port) üzerinden ekranlar için uzaktan kumanda.</span></p>
       </div>
     </article>
-
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/2b2d0dc2abc3f6d8ffb074a564d19b22955d66ea/images/projects/android/pdf-manager.png" alt="PDF Manager" loading="lazy">
       <div class="project-body">
@@ -143,7 +151,6 @@
         <p><span data-lang="ar">تطبيق لفتح وتصفح وإدارة ملفات PDF استعداداً لطباعتها.</span><span data-lang="tr">PDF dosyalarını açmak, görüntülemek ve yazdırmak için uygulama.</span></p>
       </div>
     </article>
-
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/2b2d0dc2abc3f6d8ffb074a564d19b22955d66ea/images/projects/android/where-is-it.png" alt="Item Tracker" loading="lazy">
       <div class="project-body">
@@ -151,7 +158,6 @@
         <p><span data-lang="ar">تطبيق لتنظيم وتذكر أماكن الأشياء المهمة (مفاتيح، أوراق، إلكترونيات).</span><span data-lang="tr">Önemli eşyaların yerini hatırlamak için düzenleme uygulaması.</span></p>
       </div>
     </article>
-
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/2b2d0dc2abc3f6d8ffb074a564d19b22955d66ea/images/projects/android/sahmak.png" alt="Sahmak" loading="lazy">
       <div class="project-body">
@@ -159,7 +165,6 @@
         <p><span data-lang="ar">تطبيق مالي عملي لتقسيم الفواتير والمصاريف بين الأصدقاء والمجموعات.</span><span data-lang="tr">Arkadaşlar ve gruplar arasında faturaları bölmek için pratik finans uygulaması.</span></p>
       </div>
     </article>
-
   </div>
 </section>
 
@@ -181,13 +186,54 @@
   </div>
 </section>
 
+<!-- قسم التواصل الجديد -->
 <section class="wrap" id="contact">
-  <div class="contact">
+  <div class="contact-form">
+    <!-- النموذج (يمين) -->
     <div>
-      <h2><span data-lang="ar">هل لديك فكرة أو مشروع؟</span><span data-lang="tr">Bir fikriniz veya projeniz mi var?</span></h2>
-      <p class="muted"><span data-lang="ar">أرسل وصفاً مختصراً لما تحتاجه وسأعود إليك لمناقشة التفاصيل.</span><span data-lang="tr">İhtiyacınızı kısaca paylaşın; detayları görüşmek için size dönüş yapayım.</span></p>
+      <h2><span data-lang="ar">اطلب خدمتك الآن</span><span data-lang="tr">Hemen Teklif Alın</span></h2>
+      <p><span data-lang="ar">أرسل تفاصيل مشروعك وسأرد عليك في أقرب وقت.</span><span data-lang="tr">Projenizin detaylarını gönderin, en kısa sürede size dönüş yapayım.</span></p>
+      
+      <!-- FormSubmit Service -->
+      <form action="https://formsubmit.co/moteehdamlakhy86@gmail.com" method="POST">
+        <div class="form-group">
+          <label for="name"><span data-lang="ar">الاسم الكريم</span><span data-lang="tr">Adınız</span></label>
+          <input type="text" id="name" name="name" required placeholder="اكتب اسمك هنا...">
+        </div>
+        <div class="form-group">
+          <label for="email"><span data-lang="ar">البريد الإلكتروني</span><span data-lang="tr">E-posta Adresiniz</span></label>
+          <input type="email" id="email" name="email" required placeholder="example@mail.com">
+        </div>
+        <div class="form-group">
+          <label for="message"><span data-lang="ar">تفاصيل المشروع</span><span data-lang="tr">Proje Detayları</span></label>
+          <textarea id="message" name="message" required placeholder="أخبرني عن فكرتك، أو نوع التطبيق الذي تحتاجه..."></textarea>
+        </div>
+        
+        <!-- إعدادات خفية لتحسين تجربة الإرسال -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New Project Request from Portfolio!">
+        <input type="hidden" name="_next" value="https://moteehdamlakhy86-star.github.io/Portfolio/">
+        
+        <button type="submit" class="btn">
+          <span data-lang="ar">إرسال الطلب</span><span data-lang="tr">Talebi Gönder</span>
+        </button>
+      </form>
     </div>
-    <a class="btn" id="contactBtn" href="https://wa.me/963980306895" target="_blank" rel="noopener"><span data-lang="ar">تواصل عبر WhatsApp</span><span data-lang="tr">WhatsApp ile iletişim</span></a>
+
+    <!-- معلومات التواصل (يسار) -->
+    <div class="contact-info">
+      <h3><span data-lang="ar">أو تواصل معي مباشرة:</span><span data-lang="tr">Veya doğrudan iletişime geçin:</span></h3>
+      <a href="https://wa.me/963980306895" target="_blank">
+        <span>📱</span> WhatsApp: 00963980306895
+      </a>
+      <a href="mailto:moteehdamlakhy86@gmail.com">
+        <span>✉️</span> moteehdamlakhy86@gmail.com
+      </a>
+      <div class="tag" style="margin-top:20px; display:inline-block; font-size:14px;">
+        <span data-lang="ar">متاح للتعاون مع العملاء العرب والأتراك</span>
+        <span data-lang="tr">Arap ve Türk müşterilerle işbirliğine açıktır</span>
+      </div>
+    </div>
   </div>
 </section>
 </main>
