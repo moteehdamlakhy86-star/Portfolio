@@ -29,8 +29,6 @@
     .contact{background:linear-gradient(135deg,#16375c,#142238);border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:20px}
     footer{padding:30px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:50px}
     
-    /* تم إزالة سطر الإخفاء القديم من هنا */
-    
     .ltr { direction: ltr; text-align: left; }
     .ltr .step { border-right: 0; border-left: 3px solid var(--cyan); padding: 4px 15px; }
 
@@ -74,9 +72,24 @@
 <section class="wrap" id="services">
   <div class="section-head"><h2><span data-lang="ar">الخدمات</span><span data-lang="tr">Hizmetler</span></h2><p><span data-lang="ar">حلول برمجية حسب متطلبات مشروعك.</span><span data-lang="tr">Projenizin ihtiyaçlarına göre yazılım çözümleri.</span></p></div>
   <div class="cards">
-    <article class="card"><div class="icon">📱</div><h3>Android</h3><p class="muted"><span data-lang="ar">تطوير تطبيقات Android من الصفر، وتجهيز تجربة استخدام مناسبة للهواتف.</span><span data-lang="tr">Sıfırdan Android uygulamaları ve mobil cihazlara uygun kullanıcı deneyimi.</span></p><span class="tag">APK</span><span class="tag">Mobile UI</span></article>
-    <article class="card"><div class="icon">📺</div><h3>Android TV / TV Box</h3><p class="muted"><span data-lang="ar">تطبيقات للشاشات الكبيرة مع دعم التنقل والتحكم باستخدام الريموت.</span><span data-lang="tr">Büyük ekranlar ve uzaktan kumandayla gezinme için Android TV uygulamaları.</span></p><span class="tag">Android TV</span><span class="tag">Remote</span></article>
-    <article class="card"><div class="icon">💻</div><h3>Windows Software</h3><p class="muted"><span data-lang="ar">تطوير برامج Windows مخصصة وتجهيز حزم تثبيت MSI.</span><span data-lang="tr">İhtiyaca özel Windows yazılımları ve MSI kurulum paketleri.</span></p><span class="tag">Windows</span><span class="tag">MSI</span></article>
+    <article class="card">
+      <div class="icon">📱</div>
+      <h3><span data-lang="ar">تطبيقات الأندرويد</span><span data-lang="tr">Android Uygulamaları</span></h3>
+      <p class="muted"><span data-lang="ar">تطوير تطبيقات Android من الصفر، وتجهيز تجربة استخدام مناسبة للهواتف.</span><span data-lang="tr">Sıfırdan Android uygulamaları ve mobil cihazlara uygun kullanıcı deneyimi.</span></p>
+      <span class="tag">APK</span><span class="tag">Mobile UI</span>
+    </article>
+    <article class="card">
+      <div class="icon">📺</div>
+      <h3><span data-lang="ar">تطبيقات التلفزيون</span><span data-lang="tr">Android TV / TV Box</span></h3>
+      <p class="muted"><span data-lang="ar">تطبيقات للشاشات الكبيرة مع دعم التنقل والتحكم باستخدام الريموت.</span><span data-lang="tr">Büyük ekranlar ve uzaktan kumandayla gezinme için Android TV uygulamaları.</span></p>
+      <span class="tag">Android TV</span><span class="tag">Remote</span>
+    </article>
+    <article class="card">
+      <div class="icon">💻</div>
+      <h3><span data-lang="ar">برامج الكمبيوتر</span><span data-lang="tr">Windows Yazılımları</span></h3>
+      <p class="muted"><span data-lang="ar">تطوير برامج Windows مخصصة وتجهيز حزم تثبيت MSI.</span><span data-lang="tr">İhtiyaca özel Windows yazılımları ve MSI kurulum paketleri.</span></p>
+      <span class="tag">Windows</span><span class="tag">MSI</span>
+    </article>
   </div>
 </section>
 
@@ -87,49 +100,73 @@
     <!-- Project 1 -->
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/findit.png" alt="FINDIT">
-      <div class="project-body"><h3>FINDIT (Windows)</h3><p><span data-lang="ar">أداة بحث فائقة السرعة لنظام Windows مع واجهة مظلمة أنيقة وإحصائيات دقيقة.</span><span data-lang="tr">Windows için hızlı arama aracı, karanlık arayüz ve istatistikler.</span></p></div>
+      <div class="project-body">
+        <h3><span data-lang="ar">FINDIT (برنامج بحث)</span><span data-lang="tr">FINDIT (Arama Programı)</span></h3>
+        <p><span data-lang="ar">أداة بحث فائقة السرعة لنظام Windows مع واجهة مظلمة أنيقة وإحصائيات دقيقة.</span><span data-lang="tr">Windows için hızlı arama aracı, karanlık arayüz ve istatistikler.</span></p>
+      </div>
     </article>
 
     <!-- Project 2 -->
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/tv-prayer.png" alt="TV Prayer App">
-      <div class="project-body"><h3>تطبيق الساعة والصلوات (Android TV)</h3><p><span data-lang="ar">واجهة ضخمة للشاشات الذكية تعرض الوقت والتقويم ومواقيت الصلاة.</span><span data-lang="tr">Akıllı ekranlar için saat, takvim ve namaz vakitleri arayüzü.</span></p></div>
+      <div class="project-body">
+        <h3><span data-lang="ar">تطبيق الساعة والصلوات (Android TV)</span><span data-lang="tr">Saat ve Namaz Vakitleri (Android TV)</span></h3>
+        <p><span data-lang="ar">واجهة ضخمة للشاشات الذكية تعرض الوقت والتقويم ومواقيت الصلاة.</span><span data-lang="tr">Akıllı ekranlar için saat, takvim ve namaz vakitleri arayüzü.</span></p>
+      </div>
     </article>
 
     <!-- Project 3 -->
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/passdrop.png" alt="PassDrop">
-      <div class="project-body"><h3>PassDrop (أمان)</h3><p><span data-lang="ar">مشاركة ملفات وملاحظات مشفرة (AES-256) مع خاصية الحذف الذاتي.</span><span data-lang="tr">AES-256 şifreli dosya ve not paylaşımı, kendi kendini imha etme.</span></p></div>
+      <div class="project-body">
+        <h3><span data-lang="ar">PassDrop (مشاركة آمنة)</span><span data-lang="tr">PassDrop (Güvenli Paylaşım)</span></h3>
+        <p><span data-lang="ar">مشاركة ملفات وملاحظات مشفرة (AES-256) مع خاصية الحذف الذاتي.</span><span data-lang="tr">AES-256 şifreli dosya ve not paylaşımı, kendi kendini imha etme.</span></p>
+      </div>
     </article>
 
     <!-- Project 4 -->
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/black-sea-atlas.png" alt="Black Sea Atlas">
-      <div class="project-body"><h3>مرصد البحر الأسود (BI)</h3><p><span data-lang="ar">لوحة تحكم تفاعلية وتحليل بيانات جغرافية واقتصادية لـ 18 ولاية تركية.</span><span data-lang="tr">18 Türk ili için interaktif kontrol paneli ve coğrafi veri analizi.</span></p></div>
+      <div class="project-body">
+        <h3><span data-lang="ar">مرصد البحر الأسود (ذكاء أعمال)</span><span data-lang="tr">Karadeniz Gözlemevi (İş Zekası)</span></h3>
+        <p><span data-lang="ar">لوحة تحكم تفاعلية وتحليل بيانات جغرافية واقتصادية لـ 18 ولاية تركية.</span><span data-lang="tr">18 Türk ili için interaktif kontrol paneli ve coğrafi veri analizi.</span></p>
+      </div>
     </article>
 
     <!-- Project 5 -->
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/remote-control.png" alt="Remote Control">
-      <div class="project-body"><h3>شاشتي - التحكم</h3><p><span data-lang="ar">تطبيق تحكم عن بُعد للشاشات عبر الشبكة المحلية (IP/Port).</span><span data-lang="tr">Yerel ağ (IP/Port) üzerinden ekranlar için uzaktan kumanda.</span></p></div>
+      <div class="project-body">
+        <h3><span data-lang="ar">شاشتي - التحكم عن بعد</span><span data-lang="tr">Ekranım - Uzaktan Kumanda</span></h3>
+        <p><span data-lang="ar">تطبيق تحكم عن بُعد للشاشات عبر الشبكة المحلية (IP/Port).</span><span data-lang="tr">Yerel ağ (IP/Port) üzerinden ekranlar için uzaktan kumanda.</span></p>
+      </div>
     </article>
 
     <!-- Project 6 -->
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/pdf-manager.png" alt="PDF Manager">
-      <div class="project-body"><h3>مدير طباعة PDF</h3><p><span data-lang="ar">تطبيق لفتح وتصفح وإدارة ملفات PDF استعداداً لطباعتها.</span><span data-lang="tr">PDF dosyalarını açmak, görüntülemek ve yazdırmak için uygulama.</span></p></div>
+      <div class="project-body">
+        <h3><span data-lang="ar">مدير طباعة PDF</span><span data-lang="tr">PDF Yazdırma Yöneticisi</span></h3>
+        <p><span data-lang="ar">تطبيق لفتح وتصفح وإدارة ملفات PDF استعداداً لطباعتها.</span><span data-lang="tr">PDF dosyalarını açmak, görüntülemek ve yazdırmak için uygulama.</span></p>
+      </div>
     </article>
 
     <!-- Project 7 -->
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/where-is-it.png" alt="Item Tracker">
-      <div class="project-body"><h3>وين حطيتها؟ (تتبع الأشياء)</h3><p><span data-lang="ar">تطبيق لتنظيم وتذكر أماكن الأشياء المهمة (مفاتيح، أوراق، إلكترونيات).</span><span data-lang="tr">Önemli eşyaların yerini hatırlamak için düzenleme uygulaması.</span></p></div>
+      <div class="project-body">
+        <h3><span data-lang="ar">وين حطيتها؟ (تتبع الأشياء)</span><span data-lang="tr">Nereye Koydum? (Eşya Takibi)</span></h3>
+        <p><span data-lang="ar">تطبيق لتنظيم وتذكر أماكن الأشياء المهمة (مفاتيح، أوراق، إلكترونيات).</span><span data-lang="tr">Önemli eşyaların yerini hatırlamak için düzenleme uygulaması.</span></p>
+      </div>
     </article>
 
     <!-- Project 8 -->
     <article class="card project">
       <img src="https://raw.githubusercontent.com/moteehdamlakhy86-star/Portfolio/main/images/sahmak.png" alt="Sahmak">
-      <div class="project-body"><h3>سهمك (تقسيم المصاريف)</h3><p><span data-lang="ar">تطبيق مالي عملي لتقسيم الفواتير والمصاريف بين الأصدقاء والمجموعات.</span><span data-lang="tr">Arkadaşlar ve gruplar arasında faturaları bölmek için pratik finans uygulaması.</span></p></div>
+      <div class="project-body">
+        <h3><span data-lang="ar">سهمك (تقسيم المصاريف)</span><span data-lang="tr">Hissen (Gider Bölüşümü)</span></h3>
+        <p><span data-lang="ar">تطبيق مالي عملي لتقسيم الفواتير والمصاريف بين الأصدقاء والمجموعات.</span><span data-lang="tr">Arkadaşlar ve gruplar arasında faturaları bölmek için pratik finans uygulaması.</span></p>
+      </div>
     </article>
 
   </div>
@@ -138,15 +175,27 @@
 <section class="wrap">
   <div class="section-head"><h2><span data-lang="ar">طريقة العمل</span><span data-lang="tr">Çalışma süreci</span></h2></div>
   <div class="steps">
-    <div class="step"><h3><span data-lang="ar">1. فهم الاحتياج</span><span data-lang="tr">1. İhtiyacı anlama</span></h3><p class="muted"><span data-lang="ar">نناقش الفكرة والوظائف المطلوبة.</span><span data-lang="tr">Fikri ve gerekli özellikleri konuşuruz.</span></p></div>
-    <div class="step"><h3><span data-lang="ar">2. تحديد النطاق</span><span data-lang="tr">2. Kapsamı belirleme</span></h3><p class="muted"><span data-lang="ar">نتفق على المخرجات والمدة والتكلفة قبل البدء.</span><span data-lang="tr">Başlamadan önce teslimatları, süreyi ve maliyeti netleştiririz.</span></p></div>
-    <div class="step"><h3><span data-lang="ar">3. التطوير والتسليم</span><span data-lang="tr">3. Geliştirme ve teslim</span></h3><p class="muted"><span data-lang="ar">تطوير الحل واختباره وتسليم الملفات المتفق عليها.</span><span data-lang="tr">Çözümü geliştirir, test eder ve kararlaştırılan dosyaları teslim ederim.</span></p></div>
+    <div class="step">
+      <h3><span data-lang="ar">1. فهم الاحتياج</span><span data-lang="tr">1. İhtiyacı anlama</span></h3>
+      <p class="muted"><span data-lang="ar">نناقش الفكرة والوظائف المطلوبة.</span><span data-lang="tr">Fikri ve gerekli özellikleri konuşuruz.</span></p>
+    </div>
+    <div class="step">
+      <h3><span data-lang="ar">2. تحديد النطاق</span><span data-lang="tr">2. Kapsamı belirleme</span></h3>
+      <p class="muted"><span data-lang="ar">نتفق على المخرجات والمدة والتكلفة قبل البدء.</span><span data-lang="tr">Başlamadan önce teslimatları, süreyi ve maliyeti netleştiririz.</span></p>
+    </div>
+    <div class="step">
+      <h3><span data-lang="ar">3. التطوير والتسليم</span><span data-lang="tr">3. Geliştirme ve teslim</span></h3>
+      <p class="muted"><span data-lang="ar">تطوير الحل واختباره وتسليم الملفات المتفق عليها.</span><span data-lang="tr">Çözümü geliştirir, test eder ve kararlaştırılan dosyaları teslim ederim.</span></p>
+    </div>
   </div>
 </section>
 
 <section class="wrap" id="contact">
   <div class="contact">
-    <div><h2><span data-lang="ar">هل لديك فكرة أو مشروع؟</span><span data-lang="tr">Bir fikriniz veya projeniz mi var?</span></h2><p class="muted"><span data-lang="ar">أرسل وصفاً مختصراً لما تحتاجه وسأعود إليك لمناقشة التفاصيل.</span><span data-lang="tr">İhtiyacınızı kısaca paylaşın; detayları görüşmek için size dönüş yapayım.</span></p></div>
+    <div>
+      <h2><span data-lang="ar">هل لديك فكرة أو مشروع؟</span><span data-lang="tr">Bir fikriniz veya projeniz mi var?</span></h2>
+      <p class="muted"><span data-lang="ar">أرسل وصفاً مختصراً لما تحتاجه وسأعود إليك لمناقشة التفاصيل.</span><span data-lang="tr">İhtiyacınızı kısaca paylaşın; detayları görüşmek için size dönüş yapayım.</span></p>
+    </div>
     <a class="btn" id="contactBtn" href="https://wa.me/963980306895" target="_blank" rel="noopener"><span data-lang="ar">تواصل عبر WhatsApp</span><span data-lang="tr">WhatsApp ile iletişim</span></a>
   </div>
 </section>
@@ -157,33 +206,24 @@
   const btn = document.getElementById('langBtn');
   let lang = 'ar';
 
-  // دالة لإخفاء وإظهار النصوص
   function switchLanguage(targetLang) {
     document.querySelectorAll('[data-lang]').forEach(el => {
       if (el.getAttribute('data-lang') === targetLang) {
-        el.style.display = 'inline'; // إظهار النص
+        el.style.display = 'inline';
       } else {
-        el.style.display = 'none';   // إخفاء النص
+        el.style.display = 'none';
       }
     });
   }
 
-  // إخفاء التركية عند تحميل الصفحة لأول مرة
   switchLanguage('ar');
 
-  // حدث الضغط على الزر
   btn.addEventListener('click', () => {
     lang = lang === 'ar' ? 'tr' : 'ar';
-    
-    // تغيير اتجاه الصفحة
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     document.body.classList.toggle('ltr', lang === 'tr');
-    
-    // تبديل النصوص
     switchLanguage(lang);
-    
-    // تغيير اسم الزر
     btn.textContent = lang === 'ar' ? 'Türkçe' : 'العربية';
   });
 </script>
