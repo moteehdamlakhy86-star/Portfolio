@@ -60,7 +60,6 @@
     .ltr { direction: ltr; text-align: left; }
     .ltr .step { border-right: 0; border-left: 3px solid var(--cyan); padding: 4px 15px; }
 
-    /* التجاوب مع الشاشات */
     @media(max-width:900px){
       .hero{grid-template-columns:1fr;padding-top:55px;gap:20px;text-align:center;}
       .hero .actions{justify-content:center;}
@@ -282,7 +281,8 @@
         
         <div class="form-group">
           <label for="name"><span data-lang="ar">الاسم الكريم</span><span data-lang="tr">Adınız</span></label>
-          <input type="text" id="name" name="name" required placeholder="اكتب اسمك هنا...">
+          <!-- تم إضافة data-lang للـ Placeholder -->
+          <input type="text" id="name" name="name" required placeholder="اكتب اسمك هنا..." data-ph-ar="اكتب اسمك هنا..." data-ph-tr="Adınızı buraya yazın...">
         </div>
         <div class="form-group">
           <label for="email"><span data-lang="ar">البريد الإلكتروني</span><span data-lang="tr">E-posta Adresiniz</span></label>
@@ -290,7 +290,8 @@
         </div>
         <div class="form-group">
           <label for="message"><span data-lang="ar">تفاصيل المشروع</span><span data-lang="tr">Proje Detayları</span></label>
-          <textarea id="message" name="message" required placeholder="أخبرني عن فكرتك، أو نوع التطبيق الذي تحتاجه..."></textarea>
+          <!-- تم إضافة data-lang للـ Placeholder -->
+          <textarea id="message" name="message" required placeholder="أخبرني عن فكرتك، أو نوع التطبيق الذي تحتاجه..." data-ph-ar="أخبرني عن فكرتك، أو نوع التطبيق الذي تحتاجه..." data-ph-tr="Fikrinizi veya ihtiyacınız olan uygulama türünü anlatın..."></textarea>
         </div>
         
         <button type="submit" class="btn" id="submitBtn">
@@ -327,6 +328,7 @@
   let lang = 'ar';
 
   function switchLanguage(targetLang) {
+    // تبديل النصوص العادية
     document.querySelectorAll('[data-lang]').forEach(el => {
       if (el.getAttribute('data-lang') === targetLang) {
         el.style.display = 'inline';
@@ -334,7 +336,17 @@
         el.style.display = 'none';
       }
     });
+
+    // تبديل النص الإرشادي داخل الحقول (Placeholders)
+    document.querySelectorAll('[data-ph-ar]').forEach(el => {
+      if (targetLang === 'ar') {
+        el.setAttribute('placeholder', el.getAttribute('data-ph-ar'));
+      } else {
+        el.setAttribute('placeholder', el.getAttribute('data-ph-tr'));
+      }
+    });
   }
+
   switchLanguage('ar');
   btn.addEventListener('click', () => {
     lang = lang === 'ar' ? 'tr' : 'ar';
