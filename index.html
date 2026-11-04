@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="تطوير تطبيقات Android وAndroid TV وبرامج Windows حسب احتياجات المشاريع.">
-  <title>معرض أعمال | تطوير تطبيقات وبرامج</title>
+  <title>معرض أعمال | مطور تطبيقات وبرامج</title>
   <style>
     :root{--bg:#0b1220;--panel:#121d30;--panel2:#18263d;--text:#eef4ff;--muted:#a9b8cf;--blue:#66a6ff;--cyan:#62e0d0;--line:rgba(255,255,255,.11)}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#18345b 0,transparent 34%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.7}
@@ -27,7 +27,7 @@
     .project-body{padding:18px}.project-body p{color:var(--muted);font-size:14px}
     .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{border-right:3px solid var(--cyan);padding:4px 15px}
     
-    /* تنسيق نموذج التواصل الجديد */
+    /* تنسيق نموذج التواصل */
     .contact-form{background:linear-gradient(135deg,#16375c,#142238);border:1px solid var(--line);border-radius:24px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
     .contact-form h2{margin-top:0;color:var(--cyan)}
     .contact-form p{color:var(--muted);margin-bottom:20px}
@@ -186,36 +186,31 @@
   </div>
 </section>
 
-<!-- قسم التواصل الجديد -->
+<!-- قسم التواصل الجديد والمبسط -->
 <section class="wrap" id="contact">
   <div class="contact-form">
     <!-- النموذج (يمين) -->
     <div>
       <h2><span data-lang="ar">اطلب خدمتك الآن</span><span data-lang="tr">Hemen Teklif Alın</span></h2>
-      <p><span data-lang="ar">أرسل تفاصيل مشروعك وسأرد عليك في أقرب وقت.</span><span data-lang="tr">Projenizin detaylarını gönderin, en kısa sürede size dönüş yapayım.</span></p>
+      <p><span data-lang="ar">أرسل تفاصيل مشروعك عبر بريدك الإلكتروني المفضل.</span><span data-lang="tr">Projenizin detaylarını e-posta ile gönderin.</span></p>
       
-      <!-- FormSubmit Service -->
-      <form action="https://formsubmit.co/moteehdamlakhy86@gmail.com" method="POST">
+      <!-- نموذج Mailto (يفتح تطبيق البريد مباشرة) -->
+      <form action="mailto:moteehdamlakhy86@gmail.com" method="POST" enctype="text/plain">
         <div class="form-group">
           <label for="name"><span data-lang="ar">الاسم الكريم</span><span data-lang="tr">Adınız</span></label>
-          <input type="text" id="name" name="name" required placeholder="اكتب اسمك هنا...">
+          <input type="text" id="name" name="Name" required placeholder="اكتب اسمك هنا...">
         </div>
         <div class="form-group">
-          <label for="email"><span data-lang="ar">البريد الإلكتروني</span><span data-lang="tr">E-posta Adresiniz</span></label>
-          <input type="email" id="email" name="email" required placeholder="example@mail.com">
+          <label for="email"><span data-lang="ar">البريد الإلكتروني (اختياري)</span><span data-lang="tr">E-posta Adresiniz (isteğe bağlı)</span></label>
+          <input type="email" id="email" name="Email" placeholder="example@mail.com">
         </div>
         <div class="form-group">
           <label for="message"><span data-lang="ar">تفاصيل المشروع</span><span data-lang="tr">Proje Detayları</span></label>
-          <textarea id="message" name="message" required placeholder="أخبرني عن فكرتك، أو نوع التطبيق الذي تحتاجه..."></textarea>
+          <textarea id="message" name="Message" required placeholder="أخبرني عن فكرتك، أو نوع التطبيق الذي تحتاجه..."></textarea>
         </div>
         
-        <!-- إعدادات خفية لتحسين تجربة الإرسال -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New Project Request from Portfolio!">
-        <input type="hidden" name="_next" value="https://moteehdamlakhy86-star.github.io/Portfolio/">
-        
         <button type="submit" class="btn">
-          <span data-lang="ar">إرسال الطلب</span><span data-lang="tr">Talebi Gönder</span>
+          <span data-lang="ar">إرسال الطلب عبر البريد</span><span data-lang="tr">E-posta ile Gönder</span>
         </button>
       </form>
     </div>
