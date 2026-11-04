@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="تطوير تطبيقات Android وAndroid TV وبرامج Windows حسب احتياجات المشاريع.">
+  <title>معرض أعمال | تطوير تطبيقات وبرامج</title>
+  <style>
+    :root{--bg:#0b1220;--panel:#121d30;--panel2:#18263d;--text:#eef4ff;--muted:#a9b8cf;--blue:#66a6ff;--cyan:#62e0d0;--line:rgba(255,255,255,.11)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#18345b 0,transparent 34%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.7}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1100px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:5;background:rgba(11,18,32,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}.brand{font-weight:800;font-size:18px}.brand span{color:var(--cyan)}
+    .navlinks{display:flex;gap:18px;color:var(--muted);font-size:14px}.actions{display:flex;gap:8px;align-items:center}
+    button,.btn{border:0;border-radius:12px;padding:10px 15px;font-weight:700;cursor:pointer;background:var(--blue);color:#071326}.btn.secondary,button.secondary{background:transparent;color:var(--text);border:1px solid var(--line)}
+    .hero{padding:86px 0 60px;display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+    .eyebrow{color:var(--cyan);font-weight:700}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.2;margin:12px 0}.hero p{font-size:18px;color:var(--muted);max-width:650px}
+    .hero-card{background:linear-gradient(145deg,#1b3150,#111b2d);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 24px 70px #0005}
+    .mock-window{background:#0b1423;border:1px solid #30445f;border-radius:16px;padding:14px}.dots{display:flex;gap:6px;margin-bottom:14px}.dots i{width:8px;height:8px;border-radius:50%;background:#60728b}
+    .mock-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.mock-box{height:72px;border-radius:10px;background:linear-gradient(135deg,#1d4675,#20304b);padding:12px;color:#dceaff;font-size:12px}.mock-box strong{display:block;font-size:20px;color:white}
+    section{padding:54px 0}.section-head{margin-bottom:24px}.section-head h2{font-size:30px;margin:0 0 5px}.section-head p,.muted{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
+    .icon{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;background:#203d61;font-size:22px;margin-bottom:12px}
+    .card h3{margin:5px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:4px 10px;color:var(--cyan);font-size:12px;margin:4px 3px 0 0}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{overflow:hidden;padding:0}.project-visual{height:160px;background:linear-gradient(135deg,#203c60,#111c2e);display:grid;place-items:center;color:#dceaff;font-size:44px;border-bottom:1px solid var(--line)}
+    .project-body{padding:18px}.project-body p{color:var(--muted);font-size:14px}.placeholder{font-size:12px;color:#ffd98a}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{border-right:3px solid var(--cyan);padding:4px 15px}
+    .contact{background:linear-gradient(135deg,#16375c,#142238);border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+    footer{padding:30px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:50px}
+    [data-lang="tr"]{display:none}.ltr{direction:ltr;text-align:left}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:55px}.cards,.projects,.steps{grid-template-columns:1fr}.navlinks{display:none}.contact{display:block}.contact .btn{display:inline-block;margin-top:12px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="brand" href="#">DEV<span>PORTFOLIO</span></a>
+  <div class="navlinks">
+    <a href="#services"><span data-lang="ar">الخدمات</span><span data-lang="tr">Hizmetler</span></a>
+    <a href="#work"><span data-lang="ar">الأعمال</span><span data-lang="tr">Projeler</span></a>
+    <a href="#contact"><span data-lang="ar">تواصل</span><span data-lang="tr">İletişim</span></a>
+  </div>
+  <div class="actions"><button class="secondary" id="langBtn" type="button">Türkçe</button></div>
+</nav></div></header>
+
+<main>
+<section class="wrap hero">
+  <div>
+    <div class="eyebrow"><span data-lang="ar">تطوير تطبيقات وبرامج مخصصة</span><span data-lang="tr">Özel uygulama ve yazılım geliştirme</span></div>
+    <h1><span data-lang="ar">أحوّل فكرتك إلى تطبيق أو برنامج عملي.</span><span data-lang="tr">Fikrinizi çalışan bir uygulamaya veya yazılıma dönüştürüyorum.</span></h1>
+    <p><span data-lang="ar">أطوّر تطبيقات Android وAndroid TV وبرامج Windows، مع التركيز على سهولة الاستخدام واحتياجات المشروع.</span><span data-lang="tr">Android, Android TV ve Windows uygulamaları geliştiriyorum. Projenizin ihtiyaçlarına ve kullanım kolaylığına odaklanıyorum.</span></p>
+    <div class="actions">
+      <a class="btn" href="#contact"><span data-lang="ar">ناقش مشروعك معي</span><span data-lang="tr">Projenizi konuşalım</span></a>
+      <a class="btn secondary" href="#work"><span data-lang="ar">شاهد نماذج الأعمال</span><span data-lang="tr">Projeleri inceleyin</span></a>
+    </div>
+  </div>
+  <div class="hero-card" aria-label="نموذج توضيحي لواجهة برنامج">
+    <div class="mock-window"><div class="dots"><i></i><i></i><i></i></div>
+      <div class="mock-grid">
+        <div class="mock-box"><span data-lang="ar">مشاريع</span><span data-lang="tr">Projeler</span><strong>01</strong></div>
+        <div class="mock-box"><span data-lang="ar">تطبيقات</span><span data-lang="tr">Uygulamalar</span><strong>Android</strong></div>
+        <div class="mock-box"><span data-lang="ar">منصات</span><span data-lang="tr">Platformlar</span><strong>3</strong></div>
+        <div class="mock-box"><span data-lang="ar">تواصل</span><span data-lang="tr">İletişim</span><strong>24/7</strong></div>
+      </div>
+    </div>
+    <p class="muted" style="font-size:12px;margin-bottom:0"><span data-lang="ar">رسم توضيحي للصفحة — استبدله بلقطة من مشروعك.</span><span data-lang="tr">Sayfa taslak görselidir — kendi projenizin ekran görüntüsüyle değiştirin.</span></p>
+  </div>
+</section>
+
+<section class="wrap" id="services">
+  <div class="section-head"><h2><span data-lang="ar">الخدمات</span><span data-lang="tr">Hizmetler</span></h2><p><span data-lang="ar">حلول برمجية حسب متطلبات مشروعك.</span><span data-lang="tr">Projenizin ihtiyaçlarına göre yazılım çözümleri.</span></p></div>
+  <div class="cards">
+    <article class="card"><div class="icon">📱</div><h3>Android</h3><p class="muted"><span data-lang="ar">تطوير تطبيقات Android من الصفر، وتجهيز تجربة استخدام مناسبة للهواتف.</span><span data-lang="tr">Sıfırdan Android uygulamaları ve mobil cihazlara uygun kullanıcı deneyimi.</span></p><span class="tag">APK</span><span class="tag">Mobile UI</span></article>
+    <article class="card"><div class="icon">📺</div><h3>Android TV / TV Box</h3><p class="muted"><span data-lang="ar">تطبيقات للشاشات الكبيرة مع دعم التنقل والتحكم باستخدام الريموت.</span><span data-lang="tr">Büyük ekranlar ve uzaktan kumandayla gezinme için Android TV uygulamaları.</span></p><span class="tag">Android TV</span><span class="tag">Remote</span></article>
+    <article class="card"><div class="icon">💻</div><h3>Windows Software</h3><p class="muted"><span data-lang="ar">تطوير برامج Windows مخصصة وتجهيز حزم تثبيت MSI.</span><span data-lang="tr">İhtiyaca özel Windows yazılımları ve MSI kurulum paketleri.</span></p><span class="tag">Windows</span><span class="tag">MSI</span></article>
+  </div>
+</section>
+
+<section class="wrap" id="work">
+  <div class="section-head"><h2><span data-lang="ar">نماذج من الأعمال</span><span data-lang="tr">Proje örnekleri</span></h2><p><span data-lang="ar">أضف هنا مشاريعك الحقيقية وصوراً من تشغيلها.</span><span data-lang="tr">Buraya gerçek projelerinizi ve ekran görüntülerini ekleyin.</span></p></div>
+  <div class="projects">
+    <article class="card project"><div class="project-visual">📱</div><div class="project-body"><h3><span data-lang="ar">مشروع Android رقم 1</span><span data-lang="tr">Android Projesi 1</span></h3><p><span data-lang="ar">اكتب هنا وظيفة التطبيق والمشكلة التي يحلها، وأضف صوراً حقيقية.</span><span data-lang="tr">Uygulamanın ne yaptığını ve hangi ihtiyacı karşıladığını yazın; gerçek ekran görüntüleri ekleyin.</span></p><div class="placeholder"><span data-lang="ar">[استبدل هذه المساحة بصورة التطبيق]</span><span data-lang="tr">[Bu alanı uygulama görseliyle değiştirin]</span></div></div></article>
+    <article class="card project"><div class="project-visual">📺</div><div class="project-body"><h3><span data-lang="ar">مشروع Android TV</span><span data-lang="tr">Android TV Projesi</span></h3><p><span data-lang="ar">اشرح طريقة التنقل بالريموت وأهم ميزات التطبيق.</span><span data-lang="tr">Kumandayla gezinmeyi ve uygulamanın temel özelliklerini açıklayın.</span></p><div class="placeholder"><span data-lang="ar">[أضف صورة أو لقطة فيديو]</span><span data-lang="tr">[Görsel veya video karesi ekleyin]</span></div></div></article>
+    <article class="card project"><div class="project-visual">🖥️</div><div class="project-body"><h3><span data-lang="ar">برنامج Windows + MSI</span><span data-lang="tr">Windows Yazılımı + MSI</span></h3><p><span data-lang="ar">اكتب وظيفة البرنامج، وما الذي يمكن للمستخدم إنجازه به.</span><span data-lang="tr">Programın işlevini ve kullanıcının neler yapabildiğini açıklayın.</span></p><div class="placeholder"><span data-lang="ar">[أضف صورة البرنامج والمثبت]</span><span data-lang="tr">[Program ve kurulum görseli ekleyin]</span></div></div></article>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="section-head"><h2><span data-lang="ar">طريقة العمل</span><span data-lang="tr">Çalışma süreci</span></h2></div>
+  <div class="steps">
+    <div class="step"><h3><span data-lang="ar">1. فهم الاحتياج</span><span data-lang="tr">1. İhtiyacı anlama</span></h3><p class="muted"><span data-lang="ar">نناقش الفكرة والوظائف المطلوبة.</span><span data-lang="tr">Fikri ve gerekli özellikleri konuşuruz.</span></p></div>
+    <div class="step"><h3><span data-lang="ar">2. تحديد النطاق</span><span data-lang="tr">2. Kapsamı belirleme</span></h3><p class="muted"><span data-lang="ar">نتفق على المخرجات والمدة والتكلفة قبل البدء.</span><span data-lang="tr">Başlamadan önce teslimatları, süreyi ve maliyeti netleştiririz.</span></p></div>
+    <div class="step"><h3><span data-lang="ar">3. التطوير والتسليم</span><span data-lang="tr">3. Geliştirme ve teslim</span></h3><p class="muted"><span data-lang="ar">تطوير الحل واختباره وتسليم الملفات المتفق عليها.</span><span data-lang="tr">Çözümü geliştirir, test eder ve kararlaştırılan dosyaları teslim ederim.</span></p></div>
+  </div>
+</section>
+
+<section class="wrap" id="contact">
+  <div class="contact">
+    <div><h2><span data-lang="ar">هل لديك فكرة أو مشروع؟</span><span data-lang="tr">Bir fikriniz veya projeniz mi var?</span></h2><p class="muted"><span data-lang="ar">أرسل وصفاً مختصراً لما تحتاجه وسأعود إليك لمناقشة التفاصيل.</span><span data-lang="tr">İhtiyacınızı kısaca paylaşın; detayları görüşmek için size dönüş yapayım.</span></p></div>
+    <a class="btn" id="contactBtn" href="https://wa.me/905XXXXXXXXX" target="_blank" rel="noopener"><span data-lang="ar">تواصل عبر WhatsApp</span><span data-lang="tr">WhatsApp ile iletişim</span></a>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span data-lang="ar">© 2026 — معرض أعمال تطوير التطبيقات والبرامج. جميع الحقوق محفوظة.</span><span data-lang="tr">© 2026 — Uygulama ve yazılım geliştirme portföyü. Tüm hakları saklıdır.</span><br><span data-lang="ar">استبدل بيانات التواصل وأضف مشاريعك الحقيقية قبل النشر.</span><span data-lang="tr">Yayınlamadan önce iletişim bilgilerinizi değiştirin ve gerçek projelerinizi ekleyin.</span></div></footer>
+<script>
+  const btn=document.getElementById('langBtn');
+  let lang='ar';
+  btn.addEventListener('click',()=>{
+    lang=lang==='ar'?'tr':'ar';
+    document.documentElement.lang=lang;
+    document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+    document.body.classList.toggle('ltr',lang==='tr');
+    document.querySelectorAll('[data-lang]').forEach(el=>el.style.display=el.dataset.lang===lang?'':'none');
+    btn.textContent=lang==='ar'?'Türkçe':'العربية';
+  });
+  document.querySelectorAll('[data-lang="tr"]').forEach(el=>el.style.display='none');
+</script>
+</body>
+</html>
