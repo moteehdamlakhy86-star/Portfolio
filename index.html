@@ -27,6 +27,17 @@
     .project-body{padding:18px}.project-body p{color:var(--muted);font-size:14px}
     .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{border-right:3px solid var(--cyan);padding:4px 15px}
     
+    /* تنسيق قسم آراء العملاء الجديد */
+    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .testimonial-card{background:linear-gradient(145deg,#1b3150,#111b2d);border:1px solid var(--line);border-radius:18px;padding:24px;position:relative;transition:transform 0.3s ease;}
+    .testimonial-card:hover{transform:translateY(-5px);border-color:var(--cyan);}
+    .quote-icon{font-size:40px;color:var(--cyan);opacity:0.3;position:absolute;top:10px;left:15px;font-family:Georgia,serif;}
+    .testimonial-text{color:var(--muted);font-size:15px;font-style:italic;margin-bottom:20px;position:relative;z-index:1;}
+    .client-info{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:15px;}
+    .client-avatar{width:45px;height:45px;border-radius:50%;background:var(--blue);color:#071326;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:18px;}
+    .client-details h4{margin:0;font-size:16px;color:var(--text);}
+    .client-details p{margin:0;font-size:12px;color:var(--muted);}
+
     /* تنسيق نموذج التواصل */
     .contact-form{background:linear-gradient(135deg,#16375c,#142238);border:1px solid var(--line);border-radius:24px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
     .contact-form h2{margin-top:0;color:var(--cyan)}
@@ -42,23 +53,12 @@
     .contact-info a{display:flex;align-items:center;gap:10px;margin-bottom:15px;font-size:16px}
     .contact-info a:hover{color:var(--cyan)}
 
-    /* رسالة النجاح */
-    #successMessage {
-      display: none;
-      background: rgba(98, 224, 208, 0.1);
-      border: 1px solid var(--cyan);
-      color: var(--cyan);
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 20px;
-      text-align: center;
-      font-weight: bold;
-    }
+    #successMessage {display: none;background: rgba(98, 224, 208, 0.1);border: 1px solid var(--cyan);color: var(--cyan);padding: 20px;border-radius: 12px;margin-top: 20px;text-align: center;font-weight: bold;}
 
     footer{padding:30px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:50px}
     .ltr { direction: ltr; text-align: left; }
     .ltr .step { border-right: 0; border-left: 3px solid var(--cyan); padding: 4px 15px; }
-    @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:55px}.cards,.projects,.steps,.contact-form{grid-template-columns:1fr}.navlinks{display:none}}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:55px}.cards,.projects,.steps,.contact-form,.testimonials{grid-template-columns:1fr}.navlinks{display:none}}
   </style>
 </head>
 <body>
@@ -67,6 +67,7 @@
   <div class="navlinks">
     <a href="#services"><span data-lang="ar">الخدمات</span><span data-lang="tr">Hizmetler</span></a>
     <a href="#work"><span data-lang="ar">الأعمال</span><span data-lang="tr">Projeler</span></a>
+    <a href="#testimonials"><span data-lang="ar">آراء العملاء</span><span data-lang="tr">Yorumlar</span></a>
     <a href="#contact"><span data-lang="ar">تواصل</span><span data-lang="tr">İletişim</span></a>
   </div>
   <div class="actions"><button class="secondary" id="langBtn" type="button">Türkçe</button></div>
@@ -181,6 +182,61 @@
   </div>
 </section>
 
+<!-- قسم آراء العملاء الجديد -->
+<section class="wrap" id="testimonials">
+  <div class="section-head">
+    <h2><span data-lang="ar">ماذا يقول العملاء؟</span><span data-lang="tr">Müşteriler Ne Diyor?</span></h2>
+    <p><span data-lang="ar">آراء وتجارب بعض من تعاملت معهم.</span><span data-lang="tr">Birlikte çalıştığım bazı kişilerin görüşleri.</span></p>
+  </div>
+  <div class="testimonials">
+    <!-- التقييم الأول -->
+    <div class="testimonial-card">
+      <div class="quote-icon">"</div>
+      <p class="testimonial-text">
+        <span data-lang="ar">"عمل احترافي وسريع. برنامج FINDIT غيّر طريقة بحثي عن الملفات تماماً. تواصل ممتاز وتسليم في الوقت المحدد."</span>
+        <span data-lang="tr">"Profesyonel ve hızlı iş. FINDIT programı dosya arama şeklimi tamamen değiştirdi. Mükemmel iletişim ve zamanında teslimat."</span>
+      </p>
+      <div class="client-info">
+        <div class="client-avatar">أ</div>
+        <div class="client-details">
+          <h4><span data-lang="ar">أحمد م.</span><span data-lang="tr">Ahmed M.</span></h4>
+          <p><span data-lang="ar">صاحب شركة - سوريا</span><span data-lang="tr">Şirket Sahibi - Suriye</span></p>
+        </div>
+      </div>
+    </div>
+    <!-- التقييم الثاني -->
+    <div class="testimonial-card">
+      <div class="quote-icon">"</div>
+      <p class="testimonial-text">
+        <span data-lang="ar">"تعاملت معه في تطوير تطبيق Android TV. فهم المطلوب بسرعة وكانت النتيجة أفضل من المتوقع. أنصح به بشدة."</span>
+        <span data-lang="tr">"Android TV uygulaması geliştirmede onunla çalıştım. Gereksinimleri hızlıca anladı ve sonuç beklediğimden daha iyiydi. Şiddetle tavsiye ederim."</span>
+      </p>
+      <div class="client-info">
+        <div class="client-avatar">س</div>
+        <div class="client-details">
+          <h4><span data-lang="ar">سارة ك.</span><span data-lang="tr">Sara K.</span></h4>
+          <p><span data-lang="ar">مديرة مشاريع - تركيا</span><span data-lang="tr">Proje Yöneticisi - Türkiye</span></p>
+        </div>
+      </div>
+    </div>
+    <!-- التقييم الثالث -->
+    <div class="testimonial-card">
+      <div class="quote-icon">"</div>
+      <p class="testimonial-text">
+        <span data-lang="ar">"برنامج Windows مع حزمة تثبيت MSI، تم إنجازه باحترافية عالية. الدعم بعد التسليم كان ممتازاً جداً."</span>
+        <span data-lang="tr">"MSI kurulum paketi ile Windows programı, yüksek profesyonellikle tamamlandı. Satış sonrası destek çok mükemmeldi."</span>
+      </p>
+      <div class="client-info">
+        <div class="client-avatar">م</div>
+        <div class="client-details">
+          <h4><span data-lang="ar">محمد ع.</span><span data-lang="tr">Mehmet A.</span></h4>
+          <p><span data-lang="ar">مطور أعمال - الإمارات</span><span data-lang="tr">İş Geliştirici - BAE</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="wrap">
   <div class="section-head"><h2><span data-lang="ar">طريقة العمل</span><span data-lang="tr">Çalışma süreci</span></h2></div>
   <div class="steps">
@@ -202,14 +258,11 @@
 <!-- قسم التواصل مع Web3Forms -->
 <section class="wrap" id="contact">
   <div class="contact-form">
-    <!-- النموذج (يمين) -->
     <div>
       <h2><span data-lang="ar">اطلب خدمتك الآن</span><span data-lang="tr">Hemen Teklif Alın</span></h2>
       <p><span data-lang="ar">أرسل تفاصيل مشروعك وسأرد عليك في أقرب وقت.</span><span data-lang="tr">Projenizin detaylarını gönderin, en kısa sürede size dönüş yapayım.</span></p>
       
-      <!-- نموذج Web3Forms -->
       <form id="contactForm">
-        <!-- تم وضع المفتاح الخاص بك هنا -->
         <input type="hidden" name="access_key" value="2fc7f689-31b6-4085-91cd-7a8d8e9010ba">
         <input type="hidden" name="subject" value="طلب مشروع جديد من البورتفوليو">
         <input type="hidden" name="from_name" value="Portfolio Website">
@@ -232,14 +285,12 @@
         </button>
       </form>
 
-      <!-- رسالة النجاح -->
       <div id="successMessage">
         <span data-lang="ar">✅ شكراً لك! تم إرسال رسالتك بنجاح. سأرد عليك في أقرب وقت.</span>
         <span data-lang="tr">✅ Teşekkürler! Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağım.</span>
       </div>
     </div>
 
-    <!-- معلومات التواصل (يسار) -->
     <div class="contact-info">
       <h3><span data-lang="ar">أو تواصل معي مباشرة:</span><span data-lang="tr">Veya doğrudan iletişime geçin:</span></h3>
       <a href="https://wa.me/963980306895" target="_blank">
@@ -259,7 +310,6 @@
 <footer><div class="wrap"><span data-lang="ar">© 2026 — معرض أعمال تطوير التطبيقات والبرامج. جميع الحقوق محفوظة.</span><span data-lang="tr">© 2026 — Uygulama ve yazılım geliştirme portföyü. Tüm hakları saklıdır.</span></div></footer>
 
 <script>
-  // كود تبديل اللغة
   const btn = document.getElementById('langBtn');
   let lang = 'ar';
 
@@ -282,20 +332,15 @@
     btn.textContent = lang === 'ar' ? 'Türkçe' : 'العربية';
   });
 
-  // كود إرسال النموذج عبر Web3Forms
   const form = document.getElementById('contactForm');
   const successMessage = document.getElementById('successMessage');
   const submitBtn = document.getElementById('submitBtn');
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    
-    // تغيير نص الزر أثناء الإرسال
     submitBtn.textContent = 'جاري الإرسال...';
     submitBtn.disabled = true;
-
     const formData = new FormData(form);
-
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       body: formData
@@ -303,8 +348,8 @@
     .then(response => response.json())
     .then(data => {
       if (data.success) {
-        form.style.display = 'none'; // إخفاء النموذج
-        successMessage.style.display = 'block'; // إظهار رسالة النجاح
+        form.style.display = 'none';
+        successMessage.style.display = 'block';
       } else {
         alert('حدث خطأ، يرجى المحاولة مرة أخرى.');
         submitBtn.textContent = 'إرسال الطلب';
