@@ -29,8 +29,7 @@
     .contact{background:linear-gradient(135deg,#16375c,#142238);border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:20px}
     footer{padding:30px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:50px}
     
-    /* إخفاء اللغة التركية افتراضياً */
-    [data-lang="tr"] { display: none; }
+    /* تم إزالة سطر الإخفاء القديم من هنا */
     
     .ltr { direction: ltr; text-align: left; }
     .ltr .step { border-right: 0; border-left: 3px solid var(--cyan); padding: 4px 15px; }
@@ -158,25 +157,33 @@
   const btn = document.getElementById('langBtn');
   let lang = 'ar';
 
+  // دالة لإخفاء وإظهار النصوص
+  function switchLanguage(targetLang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      if (el.getAttribute('data-lang') === targetLang) {
+        el.style.display = 'inline'; // إظهار النص
+      } else {
+        el.style.display = 'none';   // إخفاء النص
+      }
+    });
+  }
+
+  // إخفاء التركية عند تحميل الصفحة لأول مرة
+  switchLanguage('ar');
+
+  // حدث الضغط على الزر
   btn.addEventListener('click', () => {
-    // تبديل اللغة
     lang = lang === 'ar' ? 'tr' : 'ar';
     
-    // تحديث خصائص الصفحة
+    // تغيير اتجاه الصفحة
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     document.body.classList.toggle('ltr', lang === 'tr');
     
-    // إظهار وإخفاء النصوص بناءً على اللغة
-    document.querySelectorAll('[data-lang]').forEach(el => {
-      if (el.dataset.lang === lang) {
-        el.style.display = ''; // إظهار
-      } else {
-        el.style.display = 'none'; // إخفاء
-      }
-    });
+    // تبديل النصوص
+    switchLanguage(lang);
     
-    // تغيير نص الزر
+    // تغيير اسم الزر
     btn.textContent = lang === 'ar' ? 'Türkçe' : 'العربية';
   });
 </script>
